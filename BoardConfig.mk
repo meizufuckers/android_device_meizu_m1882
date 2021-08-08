@@ -51,7 +51,7 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/m1882/prebuilt/dtbo.img
 TARGET_KERNEL_SOURCE := kernel/meizu/sdm845
-TARGET_KERNEL_CONFIG := sdm845-perf_defconfig
+TARGET_KERNEL_CONFIG := ../polaris_defconfig
 
 # Kernel Modules
 BOARD_VENDOR_KERNEL_MODULES := \
