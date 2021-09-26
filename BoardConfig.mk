@@ -105,7 +105,6 @@ TARGET_SCREEN_DENSITY := 400
 
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
-TARGET_LD_SHIM_LIBS += /vendor/bin/hw/android.hardware.drm@1.3-service.clearkey|/vendor/lib64/libprotobuf-cpp-full-vendor-3.9.1.so
 
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
