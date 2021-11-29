@@ -115,9 +115,6 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     $(DEVICE_PATH)/framework_compatability_matrix.xml \
     vendor/qcom/opensource/core-utils/vendor_framework_compatibility_matrix.xml
 
-# Lights
-TARGET_PROVIDES_LIBLIGHT := true
-
 # Media
 USE_DEVICE_SPECIFIC_MEDIA := true
 TARGET_USES_MEDIA_EXTENSIONS := true
