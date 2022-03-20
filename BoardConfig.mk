@@ -4,11 +4,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-BOARD_VENDOR := meizu
-
+# Path 
 DEVICE_PATH := device/meizu/sdm845
-
-TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 
 # Build
 BUILD_BROKEN_DUP_RULES := true
@@ -58,30 +55,14 @@ BOARD_KERNEL_CMDLINE := \
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET := 0x01000000
-TARGET_PREBUILT_KERNEL_BINARY := $(DEVICE_PATH)/m1882/prebuilt/kernel
+TARGET_PREBUILT_KERNEL_BINARY := $(DEVICE_PATH)/m1882/kernel/Image.gz-dtb
 TARGET_FORCE_PREBUILT_KERNEL := true
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_SOURCE := kernel/meizu/sdm845
 TARGET_KERNEL_CONFIG := ../polaris_defconfig
 
 # Kernel Modules
-BOARD_VENDOR_KERNEL_MODULES := \
-    $(DEVICE_PATH)/m1882/prebuilt/vendor-modules/mpq-adapter.ko \
-    $(DEVICE_PATH)/m1882/prebuilt/vendor-modules/mpq-dmx-hw-plugin.ko \
-    $(DEVICE_PATH)/m1882/prebuilt/vendor-modules/pinctrl-wcd.ko \
-    $(DEVICE_PATH)/m1882/prebuilt/vendor-modules/qca_cld3_wlan.ko \
-    $(DEVICE_PATH)/m1882/prebuilt/vendor-modules/rdbg.ko \
-    $(DEVICE_PATH)/m1882/prebuilt/vendor-modules/snd-soc-cs35l41-spi.ko \
-    $(DEVICE_PATH)/m1882/prebuilt/vendor-modules/snd-soc-cs35l41.ko \
-    $(DEVICE_PATH)/m1882/prebuilt/vendor-modules/snd-soc-sdm845.ko \
-    $(DEVICE_PATH)/m1882/prebuilt/vendor-modules/snd-soc-wcd-mbhc.ko \
-    $(DEVICE_PATH)/m1882/prebuilt/vendor-modules/snd-soc-wcd-spi.ko \
-    $(DEVICE_PATH)/m1882/prebuilt/vendor-modules/snd-soc-wcd934x.ko \
-    $(DEVICE_PATH)/m1882/prebuilt/vendor-modules/snd-soc-wcd9xxx.ko \
-    $(DEVICE_PATH)/m1882/prebuilt/vendor-modules/swr-wcd-ctrl.ko \
-    $(DEVICE_PATH)/m1882/prebuilt/vendor-modules/tspp.ko \
-    $(DEVICE_PATH)/m1882/prebuilt/vendor-modules/wcd-core.ko \
-    $(DEVICE_PATH)/m1882/prebuilt/vendor-modules/wcd-dsp-glink.ko
+BOARD_VENDOR_KERNEL_MODULES := $(wildcard $(DEVICE_PATH)/m1882/kernel/lkm/*.ko)
 
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
