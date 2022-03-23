@@ -58,8 +58,7 @@ BOARD_RAMDISK_OFFSET := 0x01000000
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/m1882/kernel/Image.gz-dtb
 TARGET_IGNORE_KERNEL_DEFINITIONS := true
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
-TARGET_KERNEL_SOURCE := kernel/meizu/sdm845
-TARGET_KERNEL_CONFIG := ../polaris_defconfig
+TARGET_COMPILE_WITH_MSM_KERNEL := false
 
 # Kernel Modules
 BOARD_VENDOR_KERNEL_MODULES := $(wildcard $(DEVICE_PATH)/m1882/kernel/lkm/*.ko)
@@ -201,6 +200,10 @@ WIFI_DRIVER_MODULE_NAME := "wlan"
 WIFI_DRIVER_MODULE_PATH := "/vendor/lib/modules/qca_cld3_wlan.ko"
 WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
+
+# Headers
+TARGET_HAS_GENERIC_KERNEL_HEADERS := true
+TARGET_BOARD_KERNEL_HEADERS := $(DEVICE_PATH)/kernel-headers
 
 # inherit from the proprietary version
 -include vendor/meizu/m1882/BoardConfigVendor.mk
