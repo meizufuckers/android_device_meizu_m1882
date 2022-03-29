@@ -19,6 +19,7 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+    <!-- The absolute side margins of quick settings -->
     <dimen name="rounded_corner_content_padding">46px</dimen>
 
     <!-- Margin on the left side of the carrier text on Keyguard -->
