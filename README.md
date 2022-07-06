@@ -1,7 +1,7 @@
 Device configuration for Meizu 16th
 ==============
 
-The Meizu 16th (codenamed _"M1882"_) are high-end smartphones from Meizu.
+The Meizu 16th (codenamed _"m1882"_) are high-end smartphones from Meizu.
 
 Meizu 16th was announced and released in August 2018.
 

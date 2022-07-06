@@ -1,4 +1,3 @@
-
 # TouchPanel - FTS - firmware
 vendor/firmware/st_fts.ftb
 vendor/firmware/stm_fts_production_limits.csv
